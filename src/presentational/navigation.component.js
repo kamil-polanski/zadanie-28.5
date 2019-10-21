@@ -1,22 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router';
-import './bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import '../css/country.css';
 
 
 const Navigation = props => (
   <div>
-    <nav className="navbar navbar-default">
-      <div className="container-fluid">
-        <div className="navbar-header">
-          <Link className="navbar-brand" to="/">Państwa.js</Link>
-        </div>
-        <div className="collapse navbar-collapse">
-          <ul className="nav navbar-nav">
-            <li><Link to="/countries">Countries</Link></li>
-            <li><Link to="/continents">Continents</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </div>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="navbar-header">
+        <Link className="navbar-brand" to="/">Państwa.js</Link>
+      </div>
+      <div className="collapse navbar-collapse">
+        <ul className="navbar-nav">
+          <li className="nav-item nav-link"><Link activeStyle={{color: '#FF5733'}} to="/countries">Countries</Link></li>
+          <li className="nav-item nav-link"><Link activeStyle={{color: '#FF5733'}} to="/continents">Continents</Link></li>
+          <li className="nav-item nav-link"><Link activeStyle={{color: '#FF5733'}} to="/contact">Contact</Link></li>
+        </ul>
       </div>
     </nav>
     <div className="container-fluid">
